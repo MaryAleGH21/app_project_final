@@ -28,7 +28,7 @@
     <p class="alert"><%= alert %></p>
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-dark bg-transparent fixed-top">
-    <a class="navbar-brand text-danger" href="#"><strong>Registro de Clientes</strong></a>
+    <strong><%= link_to 'Registro de clientes', root_path, class: 'navbar-brand text-danger' %></strong>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -36,13 +36,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link disabled text-dark" href="#" tabindex="-1" aria-disabled="true">Préstamos<span class="sr-only"></span></a>
+       <%= link_to 'LogIn', root_path, class: 'nav-link text-dark' %>
       </li>
       <li class="nav-item active">
         <a class="nav-link text-dark" href="<%= customers_path %> ">Lista de Clientes<span class="sr-only"></span></a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link text-dark" href="#">Gráficos<span class="sr-only">(current)</span></a>
+        <%= link_to 'Inicio', root_path, class: 'nav-link text-dark' %>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
