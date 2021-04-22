@@ -1,0 +1,5 @@
+var elemento = document.querySelector('table tbody') 
+elemento.insertAdjacentHTML('beforeend', "<%= escape_javascript(render partial: 'products/product', locals: {product: @product})%>") 
+
+var content = document.querySelector('#product_content')
+content.value = ''

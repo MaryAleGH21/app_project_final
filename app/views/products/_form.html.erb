@@ -1,0 +1,26 @@
+<%= form_with(model: product, local: false) do |form| %> <!-- 'local' el ujs se encarga de enviar la información-->
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+
+      <ul>
+        <% product.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div>
+    <%= form.text_field :name_product, class: 'form-control', placeholder: 'Nombre del producto' %>
+  </div>
+<br>
+  <div>
+    <%= form.text_field :price, class:'form-control', placeholder: 'Precio' %>
+  </div>
+<br>
+  <div class="text-left">
+    <%= form.submit class: 'actions btn btn-danger text-white', data: {disable_with: 'submitting...'} %>
+  </div>
+  <br>
+<% end %>

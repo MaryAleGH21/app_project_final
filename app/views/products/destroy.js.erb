@@ -1,0 +1,5 @@
+var product = document.querySelector('#product-<%= j @product.id %>')
+product.parentNode.removeChild(product)
+
+var content = document.querySelector('#product_content')
+content.value = ''

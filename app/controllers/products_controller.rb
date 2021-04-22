@@ -3,9 +3,14 @@ class ProductsController < ApplicationController
 
   def index
     @products = Product.all
+    @product = Product.new
   end
 
-  def show 
+  def show
+    respond_to do |format|
+      format.js { render layout: false }
+      format.html { render :_show }
+    end
   end
 
   def new
@@ -17,17 +22,19 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
+
     respond_to do |format|
       if @product.save
-        format.json {head :no_content}
+        format.html { redirect_to @product, notice: "Todo was successfully created." }
+        format.json { render :show, status: :created, location: @product }
         format.js
       else
-        debugger
-        format.json { render json: @product.errors.full_messages, status: :unprocessable_entity }
-        format.js { render :new }
+        format.html { render :new, status: :unprocessable_entity }
+        format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
-  end 
+  end
+  
   def update
     respond_to do |format|
       if @product.update(product_params)
@@ -43,11 +50,11 @@ class ProductsController < ApplicationController
   def destroy
     @product.destroy
     respond_to do |format|
+      format.html { redirect_to products_url, notice: "Todo was successfully destroyed." }
       format.json { head :no_content }
       format.js
     end
   end
-
 
   private
   def product_params

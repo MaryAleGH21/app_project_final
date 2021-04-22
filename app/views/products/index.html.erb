@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>Products</h1>
+<%= render 'form', product: @product%>
 
 <table>
   <thead>
@@ -13,8 +14,8 @@
 
   <tbody>
     <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name_product %></td>
-        <td><%= product.price %></td>
+     <%= render 'product', product: product %>
     <% end %>
   </tbody>
+
+  <div id='product-content'></div>
