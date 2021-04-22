@@ -56,7 +56,6 @@ ActiveRecord::Schema.define(version: 2021_04_22_020838) do
   end
 
   create_table "payments", force: :cascade do |t|
-    t.string "id_customer", null: false
     t.float "balance_paid"
     t.bigint "customer_id", null: false
     t.datetime "created_at", precision: 6, null: false

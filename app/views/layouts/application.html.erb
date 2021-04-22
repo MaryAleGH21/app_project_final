@@ -27,7 +27,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-dark bg-transparent fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark text-dark bg-dark fixed-top">
     <strong><%= link_to 'Registro de clientes', root_path, class: 'navbar-brand text-danger' %></strong>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -36,13 +36,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-       <%= link_to 'LogIn', root_path, class: 'nav-link text-dark' %>
+       <%= link_to 'Login', new_admin_session_path, class: 'nav-link text-white' %>
       </li>
       <li class="nav-item active">
-        <a class="nav-link text-dark" href="<%= customers_path %> ">Lista de Clientes<span class="sr-only"></span></a>
+        <%= link_to 'Productos', products_path, class: 'nav-link text-white' %>
       </li>
       <li class="nav-item active">
-        <%= link_to 'Inicio', root_path, class: 'nav-link text-dark' %>
+        <%= link_to 'Préstamos', loans_path, class: 'nav-link text-white' %>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
@@ -61,10 +61,10 @@
     <%= yield %>
 </div>   
 
-<footer>
+<%# <footer>
   <!-- Copyright -->
   <div class="text-center text-danger p-1 bg-dark"> 
     © 2021 Copyright:
    <p><strong> La Nueva.Todos los derechos reservados</strong></p>
   </div>
-</footer>
+</footer> %>

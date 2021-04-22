@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   end
 
   def show 
-    end
+  end
 
   def new
     @product = Product.new

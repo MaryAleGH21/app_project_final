@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   resources :customers
   resources :products
+  resources :loans
   devise_for :admins
   root to: "customers#index"
 
