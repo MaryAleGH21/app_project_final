@@ -5,6 +5,10 @@
 <table>
   <thead>
     <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Total de préstamo</th>
+    <th>Fecha</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -12,6 +16,11 @@
   <tbody>
     <% @loans.each do |loan| %>
       <tr>
+        <td><%=loan.customer.name%></td>
+        <td><%=loan.customer.last_name%></td>
+        <td><%=loan.total_loan%></td>
+        <td><%=loan.created_at%></td>
+
         <td><%= link_to 'Show', loan %></td>
         <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
         <td><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>

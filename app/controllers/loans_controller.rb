@@ -7,14 +7,18 @@ class LoansController < ApplicationController
     @products = Product.all
   end
 
+  def edit  
+  end
+
   def show
   end
 
   def new 
     @loan = Loan.new 
-    @loan.loan_products.build
-    @loan.loan_products.build
     @products = Product.pluck(:name_product, :id)
+    @products.each do
+    @loan.loan_products.build
+    end
   end
   
   def create
