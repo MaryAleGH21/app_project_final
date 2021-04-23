@@ -1,0 +1,24 @@
+<%= form_with(model: loan) do |form| %>
+  
+  <div class="field">
+    <%= form.label :customer_id %>
+    <%= form.text_field :customer_id %>
+  </div>
+ 
+  <%= form.fields_for :loan_products do |loan_product| %>
+  <div class="field">
+    <%= loan_product.label :product_id %>
+    <%= loan_product.select :product_id, @products %>
+  </div>
+
+  <div class="field">
+    <%= loan_product.label :product_quantity %>
+    <%= loan_product.text_field :product_quantity %>
+  </div>
+  <%end%>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+

@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre de Cliente:</strong>
+  <%= @loan.customer.name %>
+</p>
+
+<p>
+  <strong>Total de préstamo:</strong>
+  <%= @loan.total_loan %>
+</p>
+
+<%= link_to 'Back', loans_path %>

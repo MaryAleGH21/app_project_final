@@ -37,8 +37,8 @@ ActiveRecord::Schema.define(version: 2021_04_22_020838) do
   end
 
   create_table "loan_products", force: :cascade do |t|
-    t.float "quantity_products"
-    t.float "total_products"
+    t.float "product_quantity", default: 1.0
+    t.float "product_price", default: 0.0
     t.bigint "loan_id", null: false
     t.bigint "product_id", null: false
     t.datetime "created_at", precision: 6, null: false
