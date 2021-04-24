@@ -1,17 +1,18 @@
 <p id="notice"><%= notice %></p>
 
-<h2 class="text-center">Lista de Clientes</h2>
-
+<br>
+<strong><h2 class="text-center text-danger">Lista de Clientes</h2></strong>
+<br>
 
 <div class="card-body">
   <div class="table-responsive">
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
       <thead class="thead-dark">
         <tr>
-          <th>Name</th>
-          <th>Last name</th>
-          <th>Address</th>
-          <th>Telephone</th>
+          <th class="text-center">Name</th>
+          <th class="text-center">Last name</th>
+          <th class="text-center">Address</th>
+          <th class="text-center">Telephone</th>
           <th colspan="3"></th>
         </tr>
   </thead>
@@ -19,10 +20,10 @@
   <tbody>
     <% @customers.each do |customer| %>
       <tr>
-        <td><%= customer.name %></td>
-        <td><%= customer.last_name %></td>
-        <td><%= customer.address %></td>
-        <td><%= customer.telephone %></td>
+        <td class="text-center"><%= customer.name %></td>
+        <td class="text-center"><%= customer.last_name %></td>
+        <td class="text-center"><%= customer.address %></td>
+        <td class="text-center"><%= customer.telephone %></td>
         <td><%= link_to 'Show', customer %></td>
         <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
         <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -35,4 +36,4 @@
 
 <br>
 
-<button type='button' class='btn btn-danger text-white'><%= link_to 'Nuevo Cliente', new_customer_path %></button>
+<button type='button' class='btn btn-dark text-danger'><%= link_to 'Nuevo Cliente', new_customer_path %></button>

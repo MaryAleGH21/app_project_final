@@ -1,24 +1,29 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @customer.name %>
-</p>
+<br>
+<div class="card" style="width: 18rem;">
+  <div class="card-body bg-danger">
+    <h5 class="card-title text-dark text-center">Datos del Cliente</h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Nombre: 
+     <%= @customer.name %>
+     </li>
+    <li class="list-group-item">Apellido:
+      <%= @customer.last_name %>
+    </li>
+    <li class="list-group-item">Dirección:
+      <%= @customer.address %>
+    </li>
+     <li class="list-group-item">Télefono:
+      <%= @customer.telephone %>
+    </li>
+  </ul>
+  <div class="card-body">
+    <a><%= link_to 'Edit', edit_customer_path(@customer) %></a> |
+    <a><%= link_to 'Back', customers_path %>
+ </a>
+  </div>
+</div>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @customer.last_name %>
-</p>
 
-<p>
-  <strong>Address:</strong>
-  <%= @customer.address %>
-</p>
-
-<p>
-  <strong>Telephone:</strong>
-  <%= @customer.telephone %>
-</p>
-
-<%= link_to 'Edit', edit_customer_path(@customer) %> |
-<%= link_to 'Back', customers_path %>

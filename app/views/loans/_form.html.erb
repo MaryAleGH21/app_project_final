@@ -1,24 +1,38 @@
 <%= form_with(model: loan) do |form| %>
   
-  <div class="field">
-    <%= form.label :customer_id %>
-    <%= form.text_field :customer_id %>
-  </div>
- 
-  <%= form.fields_for :loan_products do |loan_product| %>
-  <div class="field">
-    <%= loan_product.label :product_id %>
-    <%= loan_product.select :product_id, @products %>
-  </div>
+<body class="bg-dark">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-5">
+                                <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                    <div class="card-header"><h3 class="text-center font-dark-light my-4">Ingresar préstamo</h3></div>
+                                    <div class="card-body">
+  
+                                      <div class="field">
+                                        <%= form.label :customer_id %>
+                                        <%= form.text_field :customer_id %>
+                                      </div>
+                                    
+                                      <%= form.fields_for :loan_products do |loan_product| %>
+                                      <div class="field">
+                                        <%= loan_product.label :product_id %>
+                                        <%= loan_product.select :product_id, @products %>
+                                      </div>
 
-  <div class="field">
-    <%= loan_product.label :product_quantity %>
-    <%= loan_product.text_field :product_quantity %>
-  </div>
-  <%end%>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
-
+                                      <div class="field">
+                                        <%= loan_product.label :product_quantity %>
+                                        <%= loan_product.text_field :product_quantity %>
+                                      </div>
+                                      <%end%>
+                                      <br>
+                                        <%= form.submit class: 'actions btn btn-danger text-whit' %>
+                                      <% end %>
+                                      <button type='button', class="btn btn-dark"><%= link_to 'Back', loans_path %></button>
+                          </div>
+                      </div>
+                  </div>
+           </main>
+     </body>
