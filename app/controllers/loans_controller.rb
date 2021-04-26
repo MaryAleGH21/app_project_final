@@ -9,11 +9,8 @@ class LoansController < ApplicationController
 
   def edit  
     @customers = Customer.all 
-    @products = Product.pluck(:name_product, :id)
-    @products.each do
-    @loan.loan_products.build
-    end
-
+    @products = Product.pluck(:name_product, :id) 
+    @loan.loan_products.build   
   end
 
   def show
@@ -23,9 +20,7 @@ class LoansController < ApplicationController
     @customers = Customer.all 
     @loan = Loan.new 
     @products = Product.pluck(:name_product, :id)
-    @products.each do
-    @loan.loan_products.build
-    end
+    @loan.loan_products.build 
   end
   
   def create
@@ -36,6 +31,7 @@ class LoansController < ApplicationController
       if @loan.save
         format.html { redirect_to @loan, notice: "loan was successfully created." }
         format.json { render :show, status: :created, location: @loan }
+        format.js
       else
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @loan.errors, status: :unprocessable_entity }
@@ -52,6 +48,14 @@ class LoansController < ApplicationController
         format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @loan.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def destroy 
+    @loan.destroy
+    respond_to do |format|
+      format.html { redirect_to loans_url, notice: "Todo was successfully destroyed." }
+      format.json { head :no_content }
     end
   end
 
