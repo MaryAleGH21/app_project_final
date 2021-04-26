@@ -1,6 +1,6 @@
-<h1>Editing Customer</h1>
+<h2 class="text-center text-white">Editar Cliente</h2>
 
 <%= render 'form', customer: @customer %>
-
-<%= link_to 'Show', @customer %> |
-<%= link_to 'Back', customers_path %>
+<br>
+<button type="button" class="btn btn-danger"><%= link_to 'Show', @customer %></button> |
+<button type="button" class="btn btn-danger"><%= link_to 'Back', customers_path %></button>

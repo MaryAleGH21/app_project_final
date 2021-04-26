@@ -1,6 +1,5 @@
 class Loan < ApplicationRecord
   before_save :set_prices
-
   belongs_to :customer
   has_many :loan_products
   has_many :products, through: :loan_products

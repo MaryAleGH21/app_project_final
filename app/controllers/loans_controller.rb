@@ -8,12 +8,19 @@ class LoansController < ApplicationController
   end
 
   def edit  
+    @customers = Customer.all 
+    @products = Product.pluck(:name_product, :id)
+    @products.each do
+    @loan.loan_products.build
+    end
+
   end
 
   def show
   end
 
   def new 
+    @customers = Customer.all 
     @loan = Loan.new 
     @products = Product.pluck(:name_product, :id)
     @products.each do

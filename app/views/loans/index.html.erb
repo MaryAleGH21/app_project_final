@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 <br>
-<h2 class="text-center text-danger">Préstamo</h2>
+<h2 class="text-center text-danger">Registro de Préstamos</h2>
 <br>
 
 <div class="card-body">
@@ -26,7 +26,7 @@
 
             <td><%= link_to 'Show', loan %></td>
             <td><%= link_to 'Edit', edit_loan_path(loan) %></td>
-            <td><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
           </tr>
         <% end %>
       </tbody>
@@ -35,4 +35,4 @@
 </div>
 <br>
 
-<button class="btn btn-dark text-danger"><%= link_to 'Nuevo Préstamo', new_loan_path %></button>
+<button class="btn btn-danger text-danger"><%= link_to 'Nuevo Préstamo', new_loan_path %></button>
