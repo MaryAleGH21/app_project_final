@@ -12,11 +12,13 @@ class PaymentsController < ApplicationController
 
   # GET /payments/new
   def new
+    @customers = Customer.all
     @payment = Payment.new
   end
 
   # GET /payments/1/edit
   def edit
+    @customers = Customer.all
   end
 
   # POST /payments or /payments.json

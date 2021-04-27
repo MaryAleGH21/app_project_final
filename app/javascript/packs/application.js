@@ -14,12 +14,7 @@ window.$ = window.jQuery = jQuery
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
-require('packs/loans.js')
 
-// $.ajax({  
-//   url: '/products',
-//   type: 'POST',
-//   dataType: 'json',
-//   headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')},
-//   data: {"product": {"content": "Este es un producto creado desde ajax/js"}} 
-// })
+
+
+

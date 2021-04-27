@@ -59,6 +59,15 @@ class LoansController < ApplicationController
     end
   end
 
+  def form_product
+    @products = Product.pluck(:name_product, :id)
+    @loan = Loan.new
+    @loan.loan_products.build
+    respond_to do |format|
+      format.js
+    end
+  end
+
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_loan

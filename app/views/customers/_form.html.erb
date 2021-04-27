@@ -11,55 +11,54 @@
     </div>
   <% end %>
 
-    <body class="bg-dark">
-        <div id="layoutAuthentication">
-            <div id="layoutAuthentication_content">
-                <main>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-7">
-                                <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-dark-light my-4">Actualizar Datos</h3></div>
-                                    <div class="card-body">
-                                        <form>
-                                            <div class="form-row">
-                                                <div class="col-md-6">
+<body class="bg-dark">
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header"><h3 class="text-center font-dark-light my-4">Actualizar Datos</h3></div>
+                                <div class="card-body">
+                                    <form>
+                                        <div class="form-row">
+                                            <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label class="small mb-1" for="inputFirstName">Nombre</label>
-                                                        <%= form.text_field :name, class: 'form-control py-4', placeholder: 'Primer Nombre' %>
+                                                      <label class="small mb-1" for="inputFirstName">Nombre</label>
+                                                      <%= form.text_field :name, class: 'form-control py-4', placeholder: 'Primer Nombre' %>
                                                     </div>
-                                                </div>
-                                                <div class="col-md-6">
+                                                  </div>
+                                                    <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label class="small mb-1" for="inputLastName">Primer Apellido</label>
-                                                        <%= form.text_field :last_name, class: 'form-control py-4', placeholder: 'Apellido' %>
-
+                                                      <label class="small mb-1" for="inputLastName">Primer Apellido</label>
+                                                      <%= form.text_field :last_name, class: 'form-control py-4', placeholder: 'Apellido' %>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="form-group">
-                                                <label class="small mb-1" for="inputEmailAddress">Dirección</label>
-                                                <%= form.text_field :address, class: 'form-control py-4', placeholder: 'Dirección' %>
-
-                                            </div>
-                                            <div class="form-row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label class="small mb-1" for="inputPassword">Telefóno</label>
-                                                        <%= form.text_field :telephone, class: 'form-control py-4', placeholder: 'Telefóno' %>
                                                     </div>
-                                                </div>
-                                            </div>
-                                             <%= form.submit class: "form-group mt-4 mb-0 btn btn-danger text-white" %>
-                                            <% end %>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+                                                        </div>
+                                                        <div class="form-group">
+                                                          <label class="small mb-1" for="inputEmailAddress">Dirección</label>
+                                                          <%= form.text_field :address, class: 'form-control py-4', placeholder: 'Dirección' %>
+                                                        </div>
+                                                            <div class="form-row">
+                                                                <div class="col-md-6">
+                                                                    <div class="form-group">
+                                                                      <label class="small mb-1" for="inputPassword">Telefóno</label>
+                                                                      <%= form.text_field :telephone, class: 'form-control py-4', placeholder: 'Telefóno' %>
+                                                                    </div>
+                                                              </div>
+                                        </div>
+                                    <%= form.submit class: "form-group mt-4 mb-0 btn btn-danger text-white" %>
+                                    <button type='button' class='btn btn-danger'><%= link_to 'Back', customers_path %></button>
+                                <% end %>
+                            </form>
                         </div>
                     </div>
-                </main>
+                </div>
             </div>
+        </div>
+    </main>
+</div>
 
 
   
