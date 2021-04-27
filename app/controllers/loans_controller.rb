@@ -1,6 +1,6 @@
 class LoansController < ApplicationController
   before_action :set_loan, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: %i[ index]
+  before_action :authenticate_admin!, except: %i[index]
   
   def index
     @loans = Loan.all

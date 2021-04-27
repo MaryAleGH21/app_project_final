@@ -1,9 +1,10 @@
 class Loan < ApplicationRecord
   before_save :set_prices
   belongs_to :customer
-  has_many :loan_products
+  has_many :loan_products, dependent: :destroy
   has_many :products, through: :loan_products
-  accepts_nested_attributes_for :loan_products
+  accepts_nested_attributes_for :loan_products, reject_if: :all_blank, allow_destroy: true
+
 
   private
 
