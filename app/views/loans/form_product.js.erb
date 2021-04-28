@@ -1,3 +1,17 @@
-//$('#product_fields').append("<%= render 'loans/form_product' %>")
-//console.log("<%= escape_javascript render 'loans/form_product' %>")
-console.log('Hola')
+function fields() {
+  var num = document.querySelectorAll('#product_fields > div').length
+  var html = `<div>
+      <div class="field">
+          <label for="loan_loan_products_attributes_0_product_id">Product</label>
+          <%= select_tag :product_id, options_for_select(@products), name: 'loan[loan_products_attributes][0][product_id]', prompt: "Seleccione un producto" %>
+      </div>
+      <div class="field">
+          <label for="loan_loan_products_attributes_0_product_quantity">Product quantity</label>
+          <input type="text" value="1" name="loan[loan_products_attributes][0][product_quantity]" id="loan_loan_products_attributes_0_product_quantity">
+      </div>
+  </div>`
+
+  return html.split('0').join(num)
+}
+
+$('#product_fields').append(fields())

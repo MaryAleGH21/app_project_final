@@ -1,8 +1,8 @@
- $(document).ready(function(){
-
-    const $compra = document.querySelector("#compra")
-    $venta = document.querySelector("#venta");
-    $fecha = document.querySelector("#fecha");
+document.addEventListener('turbolinks:load', () => {
+ 
+  const $compra = document.querySelector("#compra")
+  $venta = document.querySelector("#venta");
+  $fecha = document.querySelector("#fecha");
     
     fetch('https://tipodecambio.paginasweb.cr/api')
     .then(respuesta => respuesta.json())
@@ -13,5 +13,5 @@
         $compra.textContent = precioCompra;
         $venta.textContent = precioVenta;
         $fecha.textContent = fechaActual;
-      });
+      }); 
 })

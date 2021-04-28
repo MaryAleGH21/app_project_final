@@ -5,19 +5,19 @@ class LoansController < ApplicationController
   def index
     @loans = Loan.all
     @products = Product.all
+    @customers = Customer.all 
   end
 
   def edit  
-    @customers = Customer.all 
+    @customers = Customer.pluck(:name, :id) 
     @products = Product.pluck(:name_product, :id) 
-    @loan.loan_products.build   
   end
 
   def show
   end
 
   def new 
-    @customers = Customer.all 
+    @customers = Customer.pluck(:name, :id) 
     @loan = Loan.new 
     @products = Product.pluck(:name_product, :id)
     @loan.loan_products.build 
