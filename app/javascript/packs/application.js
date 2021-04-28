@@ -16,5 +16,12 @@ Turbolinks.start()
 ActiveStorage.start()
 
 
-
-
+$(document).ready(function(){
+fetch('https://tipodecambio.paginasweb.cr/api')
+  .then(function(data){
+    return data.json()
+  })
+  .then(function(data){ 
+    console.log(data)
+  })
+})

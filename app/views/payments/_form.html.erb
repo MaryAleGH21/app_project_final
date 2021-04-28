@@ -26,8 +26,9 @@
                                       <%= form.label :customer_id %>
                                       <%= form.select :customer_id, options_from_collection_for_select(@customers, :id, :name ), prompt: "Selecciona un cliente" %>
                                     </div>
-                                    <div class="form-group">
-                                       <%= form.text_field :balance_paid, class:'form-control', placeholder: 'Cantidad a abonar' %>
+                                    <div class="form-group">           
+                                      <label class="large mb-1" for="inputPassword">Abono</label>
+                                       <%= form.text_field :balance_paid, class:'form-control py-4 mb-1', placeholder: 'Cantidad a abonar' %>
                                     </div>
                                     <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                       <%= form.submit class: 'actions btn btn-danger text-white', data: {disable_with: 'submitting...'} %> 
