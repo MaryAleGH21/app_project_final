@@ -1,4 +1,27 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'Edit', edit_payment_path(@payment) %> |
-<%= link_to 'Back', payments_path %>
+<br><br>
+<div class="card" style="width: 18rem;">
+  <div class="card-body bg-dark">
+    <h5 class="card-title text-danger text-center">Detalle del Abono</h5>
+  </div>
+
+ <ul class="list-group list-group-flush">
+    <li class="list-group-item">Nombre de Cliente: 
+      <%= @payment.customer.name %>
+    </li>
+    <li class="list-group-item">Apellido: 
+      <%= @payment.customer.last_name %>
+    </li>
+    <li class="list-group-item">Saldo Abonado:
+       <%= @payment.balance_paid %>
+    </li>
+    <li class="list-group-item">Fecha:
+       <%= @payment.created_at%>
+    </li>
+  </ul>
+
+<div class="card-body">
+  <%= link_to 'Edit', edit_payment_path(@payment) %> |
+  <%= link_to 'Back', payments_path %>
+</div> 
