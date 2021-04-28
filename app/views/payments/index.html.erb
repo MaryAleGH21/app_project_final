@@ -1,3 +1,21 @@
+<!-- Tipo de cambio -->   
+<table class="table table-sm">
+  <thead>
+    <tr>
+      <th scope="col text-center">Compra</th>
+      <th scope="col text-center">Venta</th>
+      <th scope="col text-center">Fecha</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td id="compra"></td>
+      <td id="venta"></td>
+      <td id="fecha"></td>
+    </tr>
+  </tbody>
+</table>
+
 <p id="notice"><%= notice %></p>
 <br>
 <h2 class="text-center text-danger">Registro de Abonos</h2>
@@ -31,7 +49,5 @@
     </table>
   </div>
 </div> 
-
 <br>
-
 <button class="btn btn-danger"><%= link_to 'Nuevo Abono', new_payment_path %></button>

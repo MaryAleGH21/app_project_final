@@ -15,13 +15,5 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
+require('packs/tipo_cambio.js')
 
-$(document).ready(function(){
-fetch('https://tipodecambio.paginasweb.cr/api')
-  .then(function(data){
-    return data.json()
-  })
-  .then(function(data){ 
-    console.log(data)
-  })
-})
