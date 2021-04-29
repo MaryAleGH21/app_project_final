@@ -1,23 +1,37 @@
 <p id="notice"><%= notice %></p>
 
 <br><br>
-<div class="card" style="width: 18rem;">
+<div class="card text-center" style="width: 20rem;">
   <div class="card-body bg-dark">
     <h5 class="card-title text-danger text-center">Detalle del Préstamo</h5>
   </div>
 
- <ul class="list-group list-group-flush">
+<div class="card-body">
+  <ul class="list-group list-group-flush">
     <li class="list-group-item">Nombre de Cliente: 
       <%= @loan.customer.name %>
     </li>
-     <li class="list-group-item">Productos:   
-        <%= @loan.products.count %>    
+  </ul>  
+</div>  
+<div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Productos:  
+    <% @loan.loan_products.each do |loan|%> 
+      <%=loan.product.name_product%>
+      <%=loan.product.price%>
     </li>
+  </ul>
+      <% end %>
+</div>  
+  <div>
+  <ul class="list-group list-group-flush">
     <li class="list-group-item">Total de préstamo:
        <%= @loan.total_loan %>
     </li>
   </ul>
-  
+</div>  
 <div class="card-body">
   <%= link_to 'Back', loans_path %>
 </div> 
+
+
