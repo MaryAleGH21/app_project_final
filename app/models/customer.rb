@@ -5,11 +5,11 @@ class Customer < ApplicationRecord
 
 
   def total_payments
-    self.payments.reduce(0) { |suma, payment| suma += payment.balance_paid }
+   payments.pluck(:balance_paid).sum
   end
 
   def total_loans
-    self.loans.reduce(0) { |suma, loan| suma += loan.total_loan }
+    loans.pluck(:total_loan).sum
   end
 
   def balances

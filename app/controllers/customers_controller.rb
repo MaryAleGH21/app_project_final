@@ -5,7 +5,7 @@ class CustomersController < ApplicationController
   # GET /customers or /customers.json
   def index
     @customers = Customer.all
-    @customers = @customers.where("name like ?", "%#{params[:q]}%") if params[:q]
+    @customers = @customers.where("name ilike ?", "%#{params[:q]}%") if params[:q]
   end
 
   # GET /customers/1 or /customers/1.json

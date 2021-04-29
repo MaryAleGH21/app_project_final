@@ -3,9 +3,9 @@ class LoansController < ApplicationController
   before_action :authenticate_admin!, except: %i[index]
   
   def index
-    @loans = Loan.all
+    @loans = Loan.includes([:customer]).all
     @products = Product.all
-    @customers = Customer.all 
+    @customers = Customer.all
   end
 
   def edit  
@@ -76,6 +76,6 @@ class LoansController < ApplicationController
   # Only allow a list of trusted parameters through.
   def loan_params
     params.require(:loan).permit(:customer_id, 
-   loan_products_attributes: [:product_quantity, :product_price, :loan_id, :product_id])
+   loan_products_attributes: [:id, :product_quantity, :product_price, :loan_id, :product_id])
   end
 end
