@@ -15,3 +15,4 @@ class Loan < ApplicationRecord
     self.total_loan = self.loan_products.map{|p| p.product_quantity * p.product_price}.sum   
   end
 end
+
