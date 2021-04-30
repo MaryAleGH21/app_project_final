@@ -19,4 +19,4 @@ ActiveStorage.start()
 
 require('packs/tipo_cambio.js')
 require('packs/customers.js')
-
+require('packs/graphics.js')
