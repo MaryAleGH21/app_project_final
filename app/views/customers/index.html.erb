@@ -2,7 +2,9 @@
 
 <br>
 <strong><h2 class="text-center text-dark">Lista de Clientes</h2></strong>
-
+<form class="form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
+</form>
 <div class="card-body">
   <div class="table-responsive">
     <table class="table table-bordered" id="dataTable" width="80%" cellspacing="0">
@@ -15,18 +17,8 @@
           <th colspan="3" class="text-center"><button type='button' class='btn btn-white'><%= link_to 'Nuevo Cliente', new_customer_path %></button></th>
         </tr>
       </thead>
-      <tbody>
-        <% @customers.each do |customer| %>
-          <tr>
-            <td class="text-center"><%= customer.name %></td>
-            <td class="text-center"><%= customer.last_name %></td>
-            <td class="text-center"><%= customer.address %></td>
-            <td class="text-center"><%= customer.telephone %></td>
-            <td><%= link_to 'Show', customer %></td>
-            <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
-            <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
+      <tbody id="customers">
+        <%= render @customers %>
       </tbody>
     </table>
   </div>

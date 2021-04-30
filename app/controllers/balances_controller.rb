@@ -3,5 +3,10 @@ class BalancesController < ApplicationController
     @loans = Loan.all
     @products = Product.all
     @customers = Customer.all 
+    @grafo = {}
+    @customers.each do |customer|
+      @grafo[customer.name] = customer.total_loans
+    end
+    @grafo
   end
 end

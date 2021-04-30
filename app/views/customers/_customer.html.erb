@@ -1,0 +1,9 @@
+<tr>
+  <td class="text-center"><%= customer.name %></td>
+  <td class="text-center"><%= customer.last_name %></td>
+  <td class="text-center"><%= customer.address %></td>
+  <td class="text-center"><%= customer.telephone %></td>
+  <td><%= link_to 'Show', customer %></td>
+  <td><%= link_to 'Edit', edit_customer_path(customer) %></td>
+  <td><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>
