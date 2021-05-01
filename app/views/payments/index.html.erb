@@ -23,7 +23,7 @@
       </tbody>
     </table>
 </section>
-
+ <div class=" container line border-danger border-top pt-2 pb-3"></div>
 <h2 class="text-center text-danger">Registro de Abonos</h2>
 
 <section class="container py-0 mb-5">
@@ -47,7 +47,7 @@
               <td class="text-center"><%= payment.customer.last_name %></td>
               <td class="text-center"><%= payment.balance_paid %></td>
               <td class="text-center"><%= payment.created_at %></td>
-              <td class="text-center"><%= link_to 'Show', payment %></td>
+              <!--<td class="text-center"><%= link_to 'Show', payment %></td>-->
               <td class="text-center"><%= link_to 'Edit', edit_payment_path(payment) %></td>
               <td class="text-center"><%= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
