@@ -1,18 +1,17 @@
-<%= form_with(model: product, local: false) do |form| %> <!-- 'local' el ujs se encarga de enviar la información-->
-  <% if product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
-
-      <ul>
-        <% product.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
+<section lass="container my-5">
+  <%= form_with(model: product, local: false) do |form| %> <!-- 'local' el ujs se encarga de enviar la información-->
+    <% if product.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
+        <ul>
+          <% product.errors.each do |error| %>
+            <li><%= error.full_message %></li>
+          <% end %>
+        </ul>
+      </div>
   <% end %>
-  
-<body class="bg-white">
-<div id="layoutAuthentication">
+
+  <div id="layoutAuthentication">
     <div id="layoutAuthentication_content">
         <main>
             <div class="container">
@@ -27,13 +26,13 @@
                                         <%= form.text_field :name_product, class: 'form-control py-4', placeholder: 'Nombre del producto' %>
                                     </div>
                                     <div class="form-group">
-                                        <label class="small mb-1" for="inputPassword">Precio</label>
-                                        <%= form.text_field :price, class:'form-control', placeholder: 'Precio' %>
+                                      <label class="small mb-1" for="inputPassword">Precio</label>
+                                      <%= form.text_field :price, class:'form-control', placeholder: 'Precio' %>
                                     </div>
                                     <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                        <%= form.submit class: 'actions btn btn-danger text-white', data: {disable_with: 'submitting...'} %>
+                                      <%= form.submit class: 'actions btn btn-danger text-white', data: {disable_with: 'submitting...'} %>
                                     </div>
-                                    <% end %>
+                                      <% end %>
                                 </form>
                             </div>
                         </div>
@@ -42,7 +41,8 @@
             </div>
         </main>
     </div>
-</body>
+  <br>
+    <h2 class="text-left text-danger text-center">Lista de Productos</h2>
+</section>
 
-<h2 class="text-left text-danger text-center">Lista de Productos</h2>
 

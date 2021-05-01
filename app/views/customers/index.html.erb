@@ -1,27 +1,31 @@
 <p id="notice"><%= notice %></p>
 
-<br>
-<strong><h2 class="text-center text-dark">Lista de Clientes</h2></strong>
-<form class="form-inline my-2 my-lg-0">
-  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="q">
-</form>
-<div class="card-body">
-  <div class="table-responsive">
-    <table class="table table-bordered" id="dataTable" width="80%" cellspacing="0">
-      <thead class="table-secondary">
-        <tr>
-          <th class="text-center">Name</th>
-          <th class="text-center">Last name</th>
-          <th class="text-center">Address</th>
-          <th class="text-center">Telephone</th>
-          <th colspan="3" class="text-center"><button type='button' class='btn btn-white'><%= link_to 'Nuevo Cliente', new_customer_path %></button></th>
-        </tr>
-      </thead>
-      <tbody id="customers">
-        <%= render @customers %>
-      </tbody>
-    </table>
-  </div>
-</div>
+<section class="container mt-0 mb-4">
+  <%= image_tag "logo_carniceria.png", class:"img-fluid" %>
+</section>
 
+<section class="container mb-5">
+<strong><h2 class="text-center text-danger">Lista de Clientes</h2></strong>
+  <form class="d-inline-flex mb-0 my-lg-2">
+    <input class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search" name="q">
+  </form>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="80%" cellspacing="0">
+        <thead class="table-secondary">
+          <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">Last name</th>
+            <th class="text-center">Address</th>
+            <th class="text-center">Telephone</th>
+            <th colspan="3" class="text-center"><button type='button' class='btn btn-white'><%= link_to 'Nuevo Cliente', new_customer_path %></button></th>
+          </tr>
+        </thead>
+        <tbody id="customers">
+          <%= render @customers %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
 
