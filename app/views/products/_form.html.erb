@@ -1,5 +1,5 @@
 
-<section lass="container my-5">
+<section class="container my-2">
   <%= form_with(model: product, local: false) do |form| %> <!-- 'local' el ujs se encarga de enviar la información-->
     <% if product.errors.any? %>
       <div id="error_explanation">
@@ -42,7 +42,8 @@
         </main>
     </div>
   <br>
-    <h2 class="text-left text-danger text-center">Lista de Productos</h2>
 </section>
+ <div class="line border-danger border-top mt-5 pb-3"></div>
+<h2 class="text-left text-danger text-center mt-5">Lista de Productos</h2>
 
 

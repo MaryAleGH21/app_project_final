@@ -1,12 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<section class="container mt-0 mb-4">
-  <%= image_tag "logo_carniceria.png", class:"img-fluid" %>
-</section>
-
 <!--Tipo de Cambio CR-->
-<section class="d-flex justify-content-center">
-    <table class="table table-sm table-borderless d-flex align-items-end flex-column bd-highlight mb-0">
+<div class="text-right my-0">
+    <table class="table table-sm table-borderless d-flex align-items-end flex-column bd-highlight">
       <thead> 
         <tr>
           <th scope="col text-center">Compra</th>
@@ -14,7 +10,7 @@
           <th scope="col text-center">Fecha</th>
         </tr>
       </thead>
-      <tbody class="d-flex align-items-end flex-column bd-highlight mb-0">
+      <tbody class="d-flex align-items-end flex-column bd-highlight">
         <tr>
           <td id="compra"></td>
           <td id="venta"></td>
@@ -22,9 +18,14 @@
         </tr>
       </tbody>
     </table>
+</div>
+
+<section class="container mt-0 mb-2">
+  <%= image_tag "logo_carniceria.png", class:"img-fluid" %>
 </section>
- <div class=" container line border-danger border-top pt-2 pb-3"></div>
-<h2 class="text-center text-danger">Registro de Abonos</h2>
+
+ <div class="line border-danger border-top mt-5 pb-4"></div>
+<h2 class="text-center text-danger mt-5">Registro de Abonos</h2>
 
 <section class="container py-0 mb-5">
   <div class="card-body">
