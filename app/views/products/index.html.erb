@@ -1,12 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<section class="container my-0">
-  <%= image_tag "logo_carniceria.png", class:"img-fluid" %>
-</section>
- <div class="line border-danger border-top mt-5 pb-3"></div>
-
 <%= render 'form', product: @product%>
 <section class="container mb-5">
+<h2 class="mt-0 mb-3">Lista de Productos</h2>
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -28,3 +24,4 @@
 </section>
 
 <div id='product-content'></div>
+
