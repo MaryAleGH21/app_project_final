@@ -1,25 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<section class="container my-0">
+<section class="container d-none d-md-block" id="imglogo">
   <%= image_tag "logo_carniceria.png", class:"img-fluid" %>
 </section>
  <div class="line border-danger border-top mt-5 pb-2"></div>
 
-<section class="container mb-5">
-<strong><h2 class="text-center text-danger mt-5">Lista de Clientes</h2></strong>
-  <form class="d-inline-flex mb-0 my-lg-2">
+<section class="container-fluid mb-5">
+  <h2>Lista de Clientes</h2>
+  <form class="d-inline-flex my-lg-2" id="search">
     <input class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search" name="q">
   </form>
+  
   <div class="card-body">
     <div class="table-responsive">
       <table class="table table-bordered" id="dataTable" width="80%" cellspacing="0">
-        <thead class="table-secondary">
+        <thead>
           <tr>
-            <th class="text-center">Name</th>
-            <th class="text-center">Last name</th>
-            <th class="text-center">Address</th>
-            <th class="text-center">Telephone</th>
-            <th colspan="3" class="text-center"><button type='button' class='btn btn-white'><%= link_to 'Nuevo Cliente', new_customer_path %></button></th>
+            <th class="text-center text-white">Nombre</th>
+            <th class="text-center text-white">Apellido</th>
+            <th class="text-center text-white">Dirección</th>
+            <th class="text-center text-white">Teléfono</th>
+            <th colspan="3" class="text-center text-white"><%= link_to 'Crear Nuevo Cliente', new_customer_path, class: "new-client" %></th>
           </tr>
         </thead>
         <tbody id="customers">

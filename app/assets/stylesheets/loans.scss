@@ -1,3 +1,82 @@
 // Place all the styles related to the loans controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+h2{
+  color:maroon;
+  text-align: center;
+  font-family:'Lucida Sans', 'Lucida Sans Regular';
+  margin-top: 20px;
+}
+
+h3{
+  font-family: Arial, Helvetica;
+  color:black;
+  text-align:center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+thead{
+  background-color: black;
+}
+
+.new-loan{
+  color: white;
+}
+
+.container {
+  margin-bottom:10%;
+}
+
+.head{
+background-color: maroon;
+margin-bottom: 20px;
+}
+
+.card-title{
+  margin-top: 5px;
+  color: white;
+  text-align: center;
+}
+
+.p-head{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode';
+  font-weight: bold;
+  text-align: center;
+  font-size: large;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.p-content{
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+.style{
+  color: maroon;
+  margin-top: 15px;
+  margin-left: 60px;
+  margin-bottom: 20px;
+  font-size: large;
+}
+
+#add_product{
+  color: maroon;
+}
+
+#color{
+  background-color: maroon;
+  margin-top: 30px;
+  margin-inline-end: 10px;
+  color: white;
+  margin-right: 75px;
+}
+
+#btn{
+  margin-right: 5px;
+  margin-left: 5px;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}

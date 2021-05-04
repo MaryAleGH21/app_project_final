@@ -1,10 +1,9 @@
-
-<section class="container my-0">     
-    <%= form_with(model: loan) do |form| %>
-      <div class="field">
-        <%= form.label :customer_id %>
-        <%= form.select :customer_id, @customers, prompt: "Seleccione un cliente" %>
-      </div>
+<div class="container">
+  <%= form_with(model: loan) do |form| %>
+  <div class="field">
+    <%= form.label :customer_id %>
+    <%= form.select :customer_id, @customers, prompt: "Seleccione un cliente" %>
+  </div>
     <%= form.fields_for :loan_products do |loan_product| %>
           <div id="product_fields">
             <div>
@@ -19,10 +18,10 @@
             </div>
           </div>     
     <%end%>
-    <button class="btn btn-light"><%= link_to 'Añadir más productos',  add_products_loans_path, id: 'add_product', remote: true %></button>                   
-    <br>
-      <%= form.submit class: 'actions btn btn-danger' %>
-        <button type='button', class="btn btn-secondary"><%= link_to 'Back', loans_path %></button> |
-        <button type='button', class="btn btn-secondary"><%= link_to 'Show', @loan %></button>
-      <% end %>
-</section>
+        <%= link_to "Añadir más productos", add_products_loans_path, id: "add_product", remote: true %>                  
+        <br>
+        <%= form.submit class: 'actions btn btn', id: "color"%>
+          <button type='button', id="btn"><%= link_to 'Back', loans_path %></button> |
+          <button type='button', id="btn"><%= link_to 'Show', @loan %></button>
+       <% end %>
+</div>

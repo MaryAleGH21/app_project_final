@@ -5,7 +5,7 @@ class LoansController < ApplicationController
   def index
     @loans = Loan.includes([:customer]).all
     @products = Product.all
-    @customers = Customer.all
+    @customers = Customer.includes([:product]).all
   end
 
   def edit  

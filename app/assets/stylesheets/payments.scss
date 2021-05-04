@@ -1,3 +1,32 @@
 // Place all the styles related to the payments controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+h2{
+  font-family:'Lucida Sans', 'Lucida Sans Regular';
+  text-align: center;
+  color: red;
+  margin-top: 50px;
+}
+
+.container{
+  margin-top: 5px;
+}
+thead{
+  background-color: black;
+}
+.link{
+  color: white;
+}
+
+.divisas{
+  background-color: maroon;
+  margin-inline: 30px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.style{
+  margin-inline-end: 30px;
+  font-weight: bold;
+}

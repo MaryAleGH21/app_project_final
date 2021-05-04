@@ -1,6 +1,6 @@
 
 <section class="container my-2">
-  <%= form_with(model: product, local: false) do |form| %> <!-- 'local' el ujs se encarga de enviar la información-->
+  <%= form_with(model: product, local: false) do |form| %> 
     <% if product.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
@@ -22,15 +22,15 @@
                             <div class="card-body">
                                 <form>
                                     <div class="form-group">
-                                        <label class="small mb-1" for="inputEmailAddress">Nombre del producto</label>
+                                        <label class="medium mb-1" for="inputEmailAddress">Nombre del producto</label>
                                         <%= form.text_field :name_product, class: 'form-control py-4', placeholder: 'Nombre del producto' %>
                                     </div>
                                     <div class="form-group">
-                                      <label class="small mb-1" for="inputPassword">Precio</label>
+                                      <label class="medium mb-1" for="inputPassword">Precio</label>
                                       <%= form.text_field :price, class:'form-control', placeholder: 'Precio' %>
                                     </div>
                                     <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                      <%= form.submit class: 'actions btn btn-danger text-white', data: {disable_with: 'submitting...'} %>
+                                      <%= form.submit class: 'actions btn-new text-white', data: {disable_with: 'submitting...'} %>
                                     </div>
                                       <% end %>
                                 </form>
@@ -43,7 +43,6 @@
     </div>
   <br>
 </section>
- <div class="line border-danger border-top mt-5 pb-3"></div>
-<h2 class="text-left text-danger text-center mt-5">Lista de Productos</h2>
+<h2>Lista de Productos</h2>
 
 
