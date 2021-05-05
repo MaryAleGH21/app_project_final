@@ -28,29 +28,29 @@
                                             <%= form.text_field :name, class: 'form-control py-4', placeholder: 'Primer Nombre' %>
                                           </div>
                                         </div>  
-                                          <div class="col-md-6">
-                                            <div class="form-group">
-                                              <label class="medium mb-1" for="inputLastName">Primer Apellido</label>
-                                              <%= form.text_field :last_name, class: 'form-control py-4', placeholder: 'Apellido' %>
-                                            </div>
+                                        <div class="col-md-6">
+                                          <div class="form-group">
+                                            <label class="medium mb-1" for="inputLastName">Primer Apellido</label>
+                                            <%= form.text_field :last_name, class: 'form-control py-4', placeholder: 'Apellido' %>
                                           </div>
+                                        </div>
                                         </div>
                                         <div class="form-group">
                                           <label class="medium mb-1" for="inputEmailAddress">Dirección</label>
                                           <%= form.text_field :address, class: 'form-control py-4', placeholder: 'Dirección' %>
                                         </div>
-                                            <div class="form-row">
-                                              <div class="col-md-6">
-                                                <div class="form-group">
-                                                  <label class="medium mb-1" for="inputPassword">Telefóno</label>
-                                                  <%= form.text_field :telephone, class: 'form-control py-4', placeholder: 'Telefóno' %>
-                                                </div>
-                                              </div>
+                                        <div class="form-row">
+                                          <div class="col-md-6">
+                                            <div class="form-group">
+                                              <label class="medium mb-1" for="inputPassword">Telefóno</label>
+                                              <%= form.text_field :telephone, class: 'form-control py-4', placeholder: 'Telefóno' %>
                                             </div>
-                                              <%= form.submit class: "form-group mt-4 mb-0 text-white", id:'btn-new' %>
-                                              <% end %>
-                                        <button type="button" id="btn"><%= link_to 'Show', @customer %></button> 
-                                        <button type='button' id="btn"><%= link_to 'Back', customers_path %></button>
+                                          </div>
+                                        </div>
+                                          <%= form.submit class: "form-group mt-4 mb-0 text-white", id:'btn-new' %>
+                                          <% end %>
+                                      <button type="button" id="btn-s"><%= link_to 'Show', @customer, id: "btn-color" %></button> 
+                                      <button type='button'><%= link_to 'Back', customers_path, id: "btn-color"  %></button>
                                 </form>
                             </div>
                         </div>

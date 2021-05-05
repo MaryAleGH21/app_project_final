@@ -18,17 +18,15 @@ thead{
 
 #btn-new{
   background-color: maroon;
-  margin-left: 30px;
-  margin-right:200px;
+  margin-left: 50px;
+  margin-right: 100px;
   margin-bottom: 30;
-}
-#btn{
-margin-right: 5px;
-margin-left: 5px;
-margin-bottom: 30px;
-}
-.new-client{
   color: white;
+}
+#btn-s{
+margin-right: 5px;
+margin-left: 30px;
+margin-bottom: 30px;
 }
 .bg-form{
   background-color: whitesmoke;
@@ -45,4 +43,15 @@ margin-bottom: 30px;
   color: rgb(182, 12, 12);
   margin-left: 5px;
   margin-right: 5px;
+}
+
+#client{
+  background-color: maroon;
+  margin-top: 10px;
+  margin-left: 30px;
+  color: white;
+}
+
+#btn-color{
+  color: black;
 }

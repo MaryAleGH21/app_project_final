@@ -25,11 +25,11 @@
             <th colspan="3"></th>
           </tr>
         </thead>
-        <%= link_to 'Crear Nuevo Cliente', new_customer_path, class: "new-client" %>
         <tbody id="customers">
           <%= render @customers %>
         </tbody>
       </table>
+      <button id="client"><%= link_to 'Crear Nuevo Cliente', new_customer_path, id:"color"%></button>
     </div>
   </div>
 </section>
