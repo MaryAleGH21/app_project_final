@@ -1,8 +1,8 @@
 document.addEventListener('turbolinks:load', () => {
  
-  const $compra = document.querySelector("#compra")
-  $venta = document.querySelector("#venta");
-  $fecha = document.querySelector("#fecha");
+  var compra = document.querySelector("#compra")
+  var venta = document.querySelector("#venta");
+  var fecha = document.querySelector("#fecha");
     
     fetch('https://tipodecambio.paginasweb.cr/api')
     .then(respuesta => respuesta.json())
@@ -10,8 +10,8 @@ document.addEventListener('turbolinks:load', () => {
         const precioCompra = divisas.compra;
         const precioVenta = divisas.venta;
         const fechaActual = divisas.fecha;
-        $compra.textContent = precioCompra;
-        $venta.textContent = precioVenta;
-        $fecha.textContent = fechaActual;
+        compra.textContent = precioCompra;
+        venta.textContent = precioVenta;
+        fecha.textContent = fechaActual;
       }); 
 })

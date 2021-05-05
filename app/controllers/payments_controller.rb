@@ -1,5 +1,6 @@
 class PaymentsController < ApplicationController
   before_action :set_payment, only: %i[ show edit update destroy ]
+  before_action :set_customer, only: %i[ new create]
 
   # GET /payments or /payments.json
   def index
@@ -23,7 +24,7 @@ class PaymentsController < ApplicationController
 
   # POST /payments or /payments.json
   def create
-    @payment = Payment.new(payment_params) 
+    @payment = Payment.new(payment_params.merge(customer: @customer))
     respond_to do |format|
       if @payment.save
         format.html { redirect_to @payment, notice: "Payment was successfully created." }
@@ -61,6 +62,10 @@ class PaymentsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_payment
       @payment = Payment.find(params[:id])
+    end
+
+    def set_customer
+      @customer = Customer.find(params[:customer_id])
     end
 
     # Only allow a list of trusted parameters through.

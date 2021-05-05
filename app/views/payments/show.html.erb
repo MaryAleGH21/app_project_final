@@ -1,9 +1,9 @@
 <p id="notice"><%= notice %></p>
 
 <br><br>
-<div class="card" style="width: 18rem;">
-  <div class="card-body bg-dark">
-    <h5 class="card-title text-danger text-center">Detalle del Abono</h5>
+<div class="card mx-auto" style="width: 18rem;">
+  <div class="card-body head">
+    <h5 class="card-title text-white text-center">Detalle del Abono</h5>
   </div>
 
  <ul class="list-group list-group-flush">
@@ -22,6 +22,6 @@
   </ul>
 
 <div class="card-body">
-  <%= link_to 'Edit', edit_payment_path(@payment) %> |
-  <%= link_to 'Back', payments_path %>
+  <button id="btn-e"><%= link_to 'Edit', edit_payment_path(@payment), id: "color-b" %></button> 
+  <button id="btn-b"><%= link_to 'Back', payments_path, id: "color-b" %></button>
 </div> 

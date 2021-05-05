@@ -1,0 +1,9 @@
+header{
+  background-image: url("assets/img/logo_carniceria.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.btn{
+  color: maroon;
+}

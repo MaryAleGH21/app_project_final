@@ -1,19 +1,22 @@
 <p id="notice"><%= notice %></p>
-<br>
-<h2 class="text-center text-danger">Balances</h2>
-<br>
 
-<div class="card-body">
+<section class="container my-4" >
+  <h2 class="my-3">Balances</h2>
+  <div id="mostrar-graficos"><%= column_chart @grafo %></div>
+  <button type="button" class="btn btn", id="graphics">Ocultar gráficos</button>
+</section>
+
+<section class="container my-5 pb-4">
+  <div class="card-body">
   <div class="table-responsive">
     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-      <thead class="thead-dark">
+      <thead>
         <tr>
-        <th class="text-center">Nombre</th>
-        <th class="text-center">Apellido</th>
-        <th class="text-center">Total de préstamos</th>
-        <th class="text-center">Total de Abonos</th>
-        <th class="text-center">Saldo Pendiente</th>   
-        <th colspan="3"></th>
+        <th class="text-center text-white">Nombre</th>
+        <th class="text-center text-white">Apellido</th>
+        <th class="text-center text-white">Total de préstamos</th>
+        <th class="text-center text-white">Total de Abonos</th>
+        <th class="text-center text-white">Saldo Pendiente</th> 
         </tr>
       </thead>
       <tbody>
@@ -23,11 +26,11 @@
             <td class="text-center"><%= customer.last_name %></td> 
             <td class="text-center"><%= customer.total_loans %></td> 
             <td class="text-center"><%= customer.total_payments %></td>
-            <td class="text-center"><%= customer.balances %></td> 
+            <td class="text-center"><%= customer.balances %></td>
           </tr>
         <% end %>
       </tbody>
     </table>
   </div>
-</div>
-<br>
+  </div>
+</section>

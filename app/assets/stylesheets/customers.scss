@@ -1,3 +1,48 @@
 // Place all the styles related to the Customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+h2{
+  font-family:'Lucida Sans', 'Lucida Sans Regular';
+  color:rgb(182, 12, 12);
+  margin-top: 50px;
+}
+
+#title-form{
+  font-family: Arial, Helvetica;
+  color:black;
+}
+
+thead{
+  background-color: black;
+}
+
+#btn-new{
+  background-color: maroon;
+  margin-left: 30px;
+  margin-right:200px;
+  margin-bottom: 30;
+}
+#btn{
+margin-right: 5px;
+margin-left: 5px;
+margin-bottom: 30px;
+}
+.new-client{
+  color: white;
+}
+.bg-form{
+  background-color: whitesmoke;
+  margin-top:0px;
+}
+
+#new-loan{
+  color: rgb(182, 12, 12);
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#new-payment{
+  color: rgb(182, 12, 12);
+  margin-left: 5px;
+  margin-right: 5px;
+}

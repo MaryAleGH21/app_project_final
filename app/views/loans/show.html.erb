@@ -1,37 +1,22 @@
 <p id="notice"><%= notice %></p>
 
-<br><br>
-<div class="card text-center" style="width: 20rem;">
-  <div class="card-body bg-dark">
-    <h5 class="card-title text-danger text-center">Detalle del Préstamo</h5>
-  </div>
+<section class="container">
+  <div class="card mx-auto" style="width: 20rem;">
+      <div class="card-body head">
+        <h5 class="card-title styles">Detalle del Préstamo</h5>
+      </div>
+        <p class="p-head">Nombre de Cliente:</p>
+          <p class="p-content"><%= @loan.customer.name %></p>
 
-<div class="card-body">
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Nombre de Cliente: 
-      <%= @loan.customer.name %>
-    </li>
-  </ul>  
-</div>  
-<div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Productos:  
-    <% @loan.loan_products.each do |loan|%> 
-      <%=loan.product.name_product%>
-      <%=loan.product.price%>
-    </li>
-  </ul>
-      <% end %>
-</div>  
-  <div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Total de préstamo:
-       <%= @loan.total_loan %>
-    </li>
-  </ul>
-</div>  
-<div class="card-body">
-  <%= link_to 'Back', loans_path %>
-</div> 
-
+        <p class="p-head">Productos:</p>
+          <% @loan.loan_products.each do |loan|%>
+          <p class="p-content"><%=loan.product.name_product%></p>
+          <strong><p class="p-content"><%=loan.product.price%></p></strong> 
+          <% end %>
+      
+       <p class="p-head">Total de préstamo:</p>
+        <p class="p-content"><%= @loan.total_loan %></p>
+        <%= link_to "Back", loans_path, id: "style" %>
+  </div>  
+</section>
 

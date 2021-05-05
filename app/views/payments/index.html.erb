@@ -1,54 +1,54 @@
+<p id="notice"><%= notice %></p>
 
 <!--Tipo de Cambio CR-->
-<table class="table table-sm table-borderless text-right ">
-  <thead>
-    <tr>
-      <th scope="col text-center">Compra</th>
-      <th scope="col text-center">Venta</th>
-      <th scope="col text-center">Fecha</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td id="compra"></td>
-      <td id="venta"></td>
-      <td id="fecha"></td>
-    </tr>
-  </tbody>
-</table>
-
-<p id="notice"><%= notice %></p>
-<br>
-
-<h2 class="text-center text-danger">Registro de Abonos</h2>
-
-<div class="card-body">
-  <div class="table-responsive">
-    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-      <thead class="thead-dark">
+<div class="text-right">
+    <table class="table table-sm table-borderless d-flex align-items-end flex-column bd-highlight">
+      <thead class="divisas"> 
         <tr>
-          <th class="text-white text-center">Nombre del Cliente</th>
-          <th class="text-white text-center">Apellido</th>
-          <th class="text-white text-center">Saldo Abonado</th>  
-          <th class="text-white text-center">Fecha de Abono</th>  
-          <th colspan="3"></th>
+          <th class="text-white">Compra</th>
+          <th class="text-white">Venta</th>
+          <th class="text-white">Fecha</th>
         </tr>
       </thead>
-
-      <tbody>
-        <% @payments.each do |payment| %>
-          <tr>
-            <td class="text-center"><%= payment.customer.name %></td>
-            <td class="text-center"><%= payment.customer.last_name %></td>
-            <td class="text-center"><%= payment.balance_paid %></td>
-            <td class="text-center"><%= payment.created_at %></td>
-            <td><%= link_to 'Show', payment %></td>
-            <td><%= link_to 'Edit', edit_payment_path(payment) %></td>
-            <td><%= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          </tr>
-        <% end %>
+      <tbody class="d-flex align-items-end flex-column bd-highlight">
+        <tr>
+          <td class="style" id="compra"></td>
+          <td class="style" id="venta"></td>
+          <td class="style" id="fecha"></td>
+        </tr>
       </tbody>
     </table>
-  </div>
-</div> 
-<button type="button" class="btn btn-danger"><%= link_to 'Nuevo Abono', new_payment_path %></button>
+</div>
+
+<section class="container mt-4">
+  <h2>Registro de Abonos</h2>
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+          <tr>
+            <th class="text-white text-center">Nombre del Cliente</th>
+            <th class="text-white text-center">Apellido</th>
+            <th class="text-white text-center">Saldo Abonado</th>  
+            <th class="text-white text-center">Fecha de Abono</th>  
+            <th colspan="3"></th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @payments.each do |payment| %>
+            <tr>
+              <td class="text-center"><%= payment.customer.name %></td>
+              <td class="text-center"><%= payment.customer.last_name %></td>
+              <td class="text-center"><%= payment.balance_paid %></td>
+              <td class="text-center"><%= payment.created_at %></td>
+              <!--<td class="text-center"><%= link_to 'Show', payment %></td>-->
+              <td class="text-center"><%= link_to 'Edit', edit_payment_path(payment) %></td>
+              <td class="text-center"><%= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div> 
+</section>
