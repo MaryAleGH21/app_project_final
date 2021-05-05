@@ -1,19 +1,23 @@
 class LoansController < ApplicationController
   before_action :set_loan, only: %i[ show edit update destroy ]
   before_action :authenticate_admin!, except: %i[index]
+  before_action :set_customer, only: %i[ new create]  
   
   def index
     @loans = Loan.includes([:customer]).all
-    @products = Product.all
+    @products = Product.includes([:customer]).all
     @customers = Customer.includes([:product]).all
+    @Loans = @loans.where("name ilike ?", "%#{params[:q]}%") if params[:q]
   end
-
   def edit  
     @customers = Customer.pluck(:name, :id) 
     @products = Product.pluck(:name_product, :id) 
   end
 
   def show
+    @loans = Loan.all
+    @products = Product.all
+    @customers = Customer.all 
   end
 
   def new 
@@ -24,8 +28,8 @@ class LoansController < ApplicationController
   end
   
   def create
-    @loan = Loan.new(loan_params)
-    @products = Product.pluck(:name_product, :id)
+    @loan = Loan.new(loan_params.merge(customer: @customer))
+    #@products = Product.pluck(:name_product, :id)
    
     respond_to do |format|
       if @loan.save
@@ -67,11 +71,14 @@ class LoansController < ApplicationController
       format.js
     end
   end
-
   private
   # Use callbacks to share common setup or constraints between actions.
   def set_loan
     @loan = Loan.find(params[:id])
+  end
+
+  def set_customer
+   @customer = Customer.find(params[:customer_id])
   end
   # Only allow a list of trusted parameters through.
   def loan_params

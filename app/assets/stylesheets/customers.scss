@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 h2{
   font-family:'Lucida Sans', 'Lucida Sans Regular';
-  color:red;
+  color:rgb(182, 12, 12);
   margin-top: 50px;
 }
 
@@ -35,3 +35,14 @@ margin-bottom: 30px;
   margin-top:0px;
 }
 
+#new-loan{
+  color: rgb(182, 12, 12);
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#new-payment{
+  color: rgb(182, 12, 12);
+  margin-left: 5px;
+  margin-right: 5px;
+}

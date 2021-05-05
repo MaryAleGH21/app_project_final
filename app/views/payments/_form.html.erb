@@ -1,8 +1,7 @@
-<%= form_with(model: payment) do |form| %>
+<%= form_with(model:  [@customer, payment]) do |form| %>
   <% if payment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
-
       <ul>
         <% payment.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -22,17 +21,13 @@
                               <div class="card-header"><h3 class="my-4">Ingresar nuevo abono</h3></div>
                               <div class="card-body">
                                   <form>
-                                      <div class="form-group">
-                                         <label class="medium mb-1" for="inputPassword">Cliente</label>
-                                        <%= form.select :customer_id, options_from_collection_for_select(@customers, :id, :name ), prompt: "Selecciona un cliente" %>
-                                      </div>
                                       <div class="form-group">           
                                         <label class="medium mb-1" for="inputPassword">Abono</label>
                                         <%= form.text_field :balance_paid, class:'form-control py-4 mb-1', placeholder: 'Cantidad a abonar' %>
                                       </div>
                                       <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                         <%= form.submit class: "actions btn btn", id: "create", data: {disable_with: 'submitting...'} %> 
-                                        <button type="button"id="btn"><%= link_to 'Back', payments_path %></button>
+                                        <button type="button"id="btn"><%= link_to 'Back', payments_path, id: "color-back" %></button>
                                       </div>
                                       <% end %>
                                   </form>

@@ -1,6 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<section class="container">
+<section class="container mb-5">
   <%= image_tag "logo_carniceria.png", class:"img-fluid", hight: 100 %>
 </section>
  <div class="line border-danger border-top mt-0 pb-2"></div>
@@ -20,9 +20,12 @@
             <th class="text-center text-white">Apellido</th>
             <th class="text-center text-white">Dirección</th>
             <th class="text-center text-white">Teléfono</th>
-            <th colspan="3" class="text-center text-white"><%= link_to 'Crear Nuevo Cliente', new_customer_path, class: "new-client" %></th>
+            <th class="text-center text-white">Nuevo Prestámo</th>
+            <th class="text-center text-white">Nuevo abono</th>
+            <th colspan="3"></th>
           </tr>
         </thead>
+        <%= link_to 'Crear Nuevo Cliente', new_customer_path, class: "new-client" %>
         <tbody id="customers">
           <%= render @customers %>
         </tbody>

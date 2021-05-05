@@ -5,7 +5,7 @@
 h2{
   font-family:'Lucida Sans', 'Lucida Sans Regular';
   text-align: center;
-  color: red;
+  color: rgb(177, 25, 25);
   margin-top: 50px;
 }
 
@@ -20,7 +20,7 @@ thead{
 }
 
 .divisas{
-  background-color: rgb(240, 10, 10);
+  background-color:rgb(182, 12, 12);
   margin-inline: 30px;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -38,12 +38,17 @@ h3{
 }
 
 #btn{
-  margin-right: 50px;
+  margin-right: 100px;
+  margin-top: 25px;
 
 }
 
 #create{
   background-color: maroon;
   color: white;
-  margin-left: 30px;
+  margin-left: 50px
+}
+
+#color-back{
+  color:black;
 }
