@@ -16,7 +16,7 @@ Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
 
-
 require('packs/tipo_cambio.js')
 require('packs/customers.js')
 require('packs/graphics.js')
+require('packs/loans.js')

@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <br>
-<div class="card" style="width: 18rem;">
-  <div class="card-body bg-secondary">
+<div class="card mx-auto" style="width: 18rem;">
+  <div class="card-body head">
     <h5 class="card-title text-white text-center">Datos del Cliente</h5>
   </div>
   <ul class="list-group list-group-flush">
@@ -18,10 +18,13 @@
      <li class="list-group-item">Télefono:
       <%= @customer.telephone %>
     </li>
+     <li class="list-group-item">Saldo Pendiente:
+      <%= @customer.balance %>
+    </li>
   </ul>
   <div class="card-body">
-    <a><%= link_to 'Edit', edit_customer_path(@customer) %></a> |
-    <a><%= link_to 'Back', customers_path %></a>
+    <button class="button"><a><%= link_to 'Edit', edit_customer_path(@customer), id: "btn-c" %></a></button> 
+    <button><a><%= link_to 'Back', customers_path, id: "btn-c" %></a></button>
   </div>
 </div>
 

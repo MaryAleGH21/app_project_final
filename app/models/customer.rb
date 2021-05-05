@@ -12,7 +12,7 @@ class Customer < ApplicationRecord
     loans.pluck(:total_loan).sum
   end
 
-  def balances
+  def balance
     total_loans - total_payments
   end
 

@@ -1,0 +1,9 @@
+ <tr>
+    <td class="text-center"><%=loan.customer.name%></td>
+    <td class="text-center"><%=loan.customer.last_name%></td>
+    <td class="text-center"><%=loan.total_loan%></td>
+    <td class="text-center"><%=loan.created_at%></td>
+    <td class="text-center"><%= link_to 'Show', loan %></td>
+    <td class="text-center"><%= link_to 'Edit', edit_loan_path(loan) %></td>
+    <td class="text-center"><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
+</tr>

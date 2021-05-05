@@ -4,11 +4,11 @@ class LoansController < ApplicationController
   before_action :set_customer, only: %i[ new create]  
   
   def index
-    @loans = Loan.includes([:customer]).all
     @products = Product.includes([:customer]).all
     @customers = Customer.includes([:product]).all
-    @Loans = @loans.where("name ilike ?", "%#{params[:q]}%") if params[:q]
+    @loans = params[:q] ? Customer.find_by('name ilike ?', "%#{params[:q]}%").loans : Loan.includes([:customer]).all
   end
+  
   def edit  
     @customers = Customer.pluck(:name, :id) 
     @products = Product.pluck(:name_product, :id) 

@@ -2,6 +2,9 @@
 
 <section class="container mb-5 mt-2">
   <h2>Registro de Préstamos</h2>
+  <form class="d-inline-flex my-lg-2" id="search">
+  <input class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search" name="q">
+</form>
     <div class="card-body">
       <div class="table-responsive">
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -15,18 +18,8 @@
             </tr>
           </thead>
 
-          <tbody>
-            <% @loans.each do |loan| %>
-              <tr>
-                <td class="text-center"><%=loan.customer.name%></td>
-                <td class="text-center"><%=loan.customer.last_name%></td>
-                <td class="text-center"><%=loan.total_loan%></td>
-                <td class="text-center"><%=loan.created_at%></td>
-                <td class="text-center"><%= link_to 'Show', loan %></td>
-                <td class="text-center"><%= link_to 'Edit', edit_loan_path(loan) %></td>
-                <td class="text-center"><%= link_to 'Destroy', loan, method: :delete, data: { confirm: 'Are you sure?' } %></td> 
-              </tr>
-            <% end %>
+          <tbody id="loans">
+            <%= render @loans%>
           </tbody>
         </table>
       </div>
