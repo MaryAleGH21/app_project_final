@@ -5,7 +5,7 @@
   <td class="text-center"><%= customer.telephone %></td>
   <td><button class="btn-sm"><%= link_to 'Crear Nuevo Préstamo', new_customer_loan_path(customer), id: "new-loan"%></button></td>
   <td><button class="btn-sm"><%= link_to 'Crear Nuevo Abono', new_customer_payment_path(customer), id: "new-payment" %></button></td>
-  <td class="text-center"><%= link_to 'Show', customer %></td>
+  <td class="text-center"><%= link_to 'Detalle', customer %></td>
   <td class="text-center"><%= link_to 'Edit', edit_customer_path(customer) %></td>
   <td class="text-center"><%= link_to 'Destroy', customer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 </tr>

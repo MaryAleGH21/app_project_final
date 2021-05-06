@@ -7,3 +7,7 @@ header{
 .btn{
   color: maroon;
 }
+
+#mostrar-graficos{
+  display: none
+}

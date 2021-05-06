@@ -1,6 +1,5 @@
 
-<section class="container my-2">
-  <%= form_with(model: product, local: false) do |form| %> 
+  <%= form_with(model: product, class: 'product-content', local: false) do |form| %> 
     <% if product.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(todo.errors.count, "error") %> prohibited this todo from being saved:</h2>
@@ -11,36 +10,19 @@
         </ul>
       </div>
   <% end %>
-  <div id="layoutAuthentication">
-    <div id="layoutAuthentication_content">
-        <main>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-5">
-                        <div class="card shadow-lg border-0 rounded-lg mt-5">
-                            <div class="card-header"><h3 class="text-center font-dark-light my-4">Ingresar nuevo producto</h3></div>
-                            <div class="card-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label class="medium mb-1" for="inputEmailAddress">Nombre del producto</label>
-                                        <%= form.text_field :name_product, class: 'form-control py-4', placeholder: 'Nombre del producto' %>
-                                    </div>
-                                    <div class="form-group">
-                                      <label class="medium mb-1" for="inputPassword">Precio</label>
-                                      <%= form.text_field :price, class:'form-control', placeholder: 'Precio' %>
-                                    </div>
-                                    <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
-                                      <%= form.submit class: 'actions btn-new text-white', data: {disable_with: 'submitting...'} %>
-                                    </div>
-                                      <% end %>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-</section>
+
+<div class="form-group">
+    <label class="medium mb-1" for="inputEmailAddress">Nombre del producto</label>
+    <%= form.text_field :name_product, class: 'form-control py-4', placeholder: 'Nombre del producto' %>
+</div>
+<div class="form-group">
+  <label class="medium mb-1" for="inputPassword">Precio</label>
+  <%= form.text_field :price, class:'form-control', placeholder: 'Precio' %>
+</div>
+<div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
+  <%= form.submit class: 'actions btn-new text-white', data: {disable_with: 'submitting...'} %>
+</div>
+  <% end %>
+                   
 
 

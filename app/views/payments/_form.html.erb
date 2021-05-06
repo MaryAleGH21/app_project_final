@@ -21,6 +21,7 @@
                               <div class="card-header"><h3 class="my-4">Ingresar nuevo abono</h3></div>
                               <div class="card-body">
                                   <form>
+                                  <p><strong>Cliente:</strong>&nbsp;<%= @customer.name %>&nbsp;<%= @customer.last_name %></p>
                                       <div class="form-group">           
                                         <label class="medium mb-1" for="inputPassword">Abono</label>
                                         <%= form.text_field :balance_paid, class:'form-control py-4 mb-1', placeholder: 'Cantidad a abonar' %>
