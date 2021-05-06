@@ -1,5 +1,5 @@
 
 <td class="text-dark text-center"><%= product.name_product %></td>
 <td class="text-dark text-center"><%= product.price %></td>
-<td class="text-dark text-center"><%= link_to 'Edit', edit_product_path(product), remote: true %></td>
-<td class="text-dark text-center"><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
+<td class="text-dark text-center"><%= link_to 'Editar', edit_product_path(product), remote: true %></td>
+<td class="text-dark text-center"><%= link_to 'Eliminar', product, method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
