@@ -12,6 +12,12 @@ Rails.application.routes.draw do
       get 'form_product', to: 'loans#form_product', as: 'add_products'
     end
   end
+
+
+
+
+  
+
  
   #Devise 
   devise_for :admins do 

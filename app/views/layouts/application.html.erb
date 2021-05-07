@@ -50,7 +50,7 @@
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                       <%= link_to 'Login', new_admin_session_path, class: 'nav-link text-center text-dark'%>
                         <div class="dropdown-divider"></div>
-                      <%= link_to 'Logout', destroy_admin_session_path, method: :delete, class: 'nav-link text-center text-dark'%>
+                        <%= link_to 'Logout', destroy_admin_session_path, method: :delete, class: 'nav-link text-center text-dark'%>
                     </div>
                   </li>
               </ul>
@@ -61,9 +61,9 @@
      <%= yield %>
     </div>   
   
-      <footer class= "container-fluid text-center fixed-bottom py-0 my-0">
-        <p class="text-white my-0 ">© 2021 Copyright:</p>
-        <p class="text-white my-0">La Nueva.Todos los derechos reservados</p>
-       </footer> 
+    <footer class= "container-fluid text-center fixed-bottom py-0 my-0">
+      <p class="text-white my-0 ">© 2021 Copyright:</p>
+      <p class="text-white my-0">La Nueva.Todos los derechos reservados</p>
+      </footer> 
   </body> 
 </html>  
