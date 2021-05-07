@@ -43,8 +43,8 @@ margin-bottom: 30px;
 
 #client{
   background-color: maroon;
-  margin-top: 10px;
-  margin-left: 30px;
+  margin-top: 0px;
+  margin-left: 10px;
   color: white;
 }
 
@@ -63,4 +63,23 @@ margin-bottom: 30px;
 
 #btn-c{
   color: black;
+}
+
+#show_customer{
+  display: none 
+}
+
+#color-font{
+  color: black;
+}
+
+#customer_edit{
+ background-color: maroon; 
+ color: white;
+ margin-left: 980px;
+}
+
+#search{
+  margin-left: 25px;
+  margin-bottom: 5px;
 }

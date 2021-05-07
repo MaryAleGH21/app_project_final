@@ -8,20 +8,20 @@ class CustomersController < ApplicationController
     @customers = @customers.where("name ilike ?", "%#{params[:q]}%") if params[:q]
   end
 
-  # GET /customers/1 or /customers/1.json
+  
   def show
+    @customer_data= @customer.loans.select("created_at,SUM(total_loan)").where('created_at > ?', Date.today.beginning_of_month - 1.year).group(:created_at, :total_loan).sum(:total_loan)
   end
 
-  # GET /customers/new
+  
   def new
     @customer = Customer.new
   end
 
-  # GET /customers/1/edit
+
   def edit
   end
 
-  # POST /customers or /customers.json
   def create
     @customer = Customer.new(customer_params)
 

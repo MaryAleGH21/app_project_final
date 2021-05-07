@@ -1,32 +1,54 @@
 <p id="notice"><%= notice %></p>
 
-<br>
-<div class="card mx-auto" style="width: 18rem;">
+<button type="button" class="btn btn text-white" id="customer_edit">Editar cliente</button>
+<section>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body head">
+      <h5 class="card-title text-white text-center">Saldo del Cliente</h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Nombre: 
+      <%= @customer.name %> <%= @customer.last_name %>
+      </li>
+      <li class="list-group-item">Saldo pendiente:
+        <%= @customer.balance %>
+      </li>
+      <div class="card-body">
+        <button><%= link_to 'Abonar', new_customer_payment_path(@customer), id: "color-font" %></button> 
+        <button><%= link_to 'Regresar', customers_path, id: "color-font" %></button> 
+      </div>    
+    </ul>
+  </div>
+</section>
+
+<div class="card mx-auto" id="show_customer" style="width: 18rem;">
   <div class="card-body head">
     <h5 class="card-title text-white text-center">Datos del Cliente</h5>
   </div>
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">Nombre: 
-     <%= @customer.name %>
-     </li>
-    <li class="list-group-item">Apellido:
-      <%= @customer.last_name %>
-    </li>
-    <li class="list-group-item">Dirección:
-      <%= @customer.address %>
-    </li>
-     <li class="list-group-item">Télefono:
-      <%= @customer.telephone %>
-    </li>
-     <li class="list-group-item">Saldo Pendiente:
-      <%= @customer.balance %>
-    </li>
-  </ul>
-  <div class="card-body">
-    <button class="button"><a><%= link_to 'Editar', edit_customer_path(@customer), id: "btn-c" %></a></button> 
-    <button><a><%= link_to 'Regresar', customers_path, id: "btn-c" %></a></button>
-  </div>
-</div>
-
-
-
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Nombre: 
+      <%= @customer.name %>
+      </li>
+      <li class="list-group-item">Apellido:
+        <%= @customer.last_name %>
+      </li>
+      <li class="list-group-item">Dirección:
+        <%= @customer.address %>
+      </li>
+      <li class="list-group-item">Télefono:
+        <%= @customer.telephone %>
+      </li>
+      <li class="list-group-item">Saldo Pendiente:
+        <%= @customer.balance %>
+      </li>
+    </ul>
+    <div class="card-body">
+      <button><a><%= link_to 'Editar', edit_customer_path(@customer), id: "btn-c" %></a></button> 
+      <button><%= link_to 'Eliminar', @customer, id: "btn-c", method: :delete, data: { confirm: 'Are you sure?' } %></button>
+    </div>
+</div> 
+  
+<div class="mt-5">
+  <h2 class="mt-5 mb-4">Ventas Mensuales</h2>
+  <%= line_chart @customer_data %>
+</div>  

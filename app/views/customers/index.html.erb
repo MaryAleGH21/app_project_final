@@ -3,13 +3,13 @@
 <section class="container mb-5">
   <%= image_tag "logo_carniceria.png", class:"img-fluid", hight: 100 %>
 </section>
- <div class="line border-danger border-top mt-0 pb-2"></div>
+ <div class="line border-danger border-top mt-0 mb-5"></div>
 
-<section class="container-fluid mt-5">
-  <h2>Lista de Clientes</h2>
-  <form class="d-inline-flex my-lg-2 mt-5" id="search">
-    <input class="form-control mr-sm-4" type="search" placeholder="Search" aria-label="Search" name="q">
+<section class="container-fluid">
+  <form class="d-inline-flex my-lg-2" id="search">
+    <input class="form-control mr-sm-4" type="search" placeholder="Buscar clientes" aria-label="Search" name="q">
   </form>
+<button class="btn btn" id="client"><%= link_to 'Crear Nuevo Cliente', new_customer_path, id:"color" %></button>
   
   <div class="card-body">
     <div class="table-responsive">
@@ -32,5 +32,4 @@
     </div>
   </div>
 </section>
-<button id="client"><%= link_to 'Crear Nuevo Cliente', new_customer_path, id:"color"%></button>
 
