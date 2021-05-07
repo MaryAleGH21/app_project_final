@@ -22,7 +22,6 @@ class ProductsController < ApplicationController
 
   def create
     @product = Product.new(product_params)
-
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: "Todo was successfully created." }
@@ -36,6 +35,7 @@ class ProductsController < ApplicationController
   end
   
   def update
+    @new_product = Product.new
     respond_to do |format|
       if @product.update(product_params)
         format.json { head :no_content }

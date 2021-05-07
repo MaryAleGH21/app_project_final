@@ -1,5 +1,5 @@
 var elem = document.querySelector(`#product-<%= @product.id %>`)
 elem.innerHTML = "<%= j render partial: 'products/product-detail', locals: { product: @product } %>"
 
-var div = document.querySelector('#product-content')
-div.innerHTML = ''
+var div = document.querySelector('.card-body')
+div.innerHTML = "<%= j render 'form', product: @new_product %>"
