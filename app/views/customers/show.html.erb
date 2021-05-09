@@ -14,7 +14,7 @@
         <%= @customer.balance %>
       </li>
       <div class="card-body">
-        <button><%= link_to 'Abonar', new_customer_payment_path(@customer), id: "color-font" %></button> 
+        <button id="space-a"><%= link_to 'Abonar', new_customer_payment_path(@customer), id: "color-font" %></button> 
         <button><%= link_to 'Regresar', customers_path, id: "color-font" %></button> 
       </div>    
     </ul>
@@ -40,7 +40,7 @@
       </li>   
     </ul>
     <div class="card-body">
-      <button><a><%= link_to 'Editar', edit_customer_path(@customer), id: "btn-c" %></a></button> 
+      <button id="space-e"><%= link_to 'Editar', edit_customer_path(@customer), id: "btn-c" %></button> 
       <button><%= link_to 'Eliminar', @customer, id: "btn-c", method: :delete, data: { confirm: 'Are you sure?' } %></button>
     </div>
 </div> 

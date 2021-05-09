@@ -2,19 +2,19 @@
 
 <section class="container">
   <div class="card mx-auto" style="width: 20rem;">
-      <div class="card-body head">
-        <h5 class="card-title styles">Detalle del Préstamo</h5>
-      </div>
-        <p class="p-head">Nombre de Cliente:</p>
-          <p class="p-content"><%= @loan.customer.name %></p>
+    <div class="card-body head">
+      <h5 class="card-title styles">Detalle del Préstamo</h5>
+    </div>
+      <p class="p-head">Nombre de Cliente:</p>
+        <p class="p-content"><%= @loan.customer.name %></p>
 
-        <p class="p-head">Productos:</p>
-          <% @loan.loan_products.each do |loan|%>
-          <p class="p-content"><%=loan.product.name_product%></p>
-          <strong><p class="p-content"><%=loan.product.price%></p></strong> 
-          <% end %>
-      
-       <p class="p-head">Total de préstamo:</p>
+      <p class="p-head">Productos:</p>
+        <% @loan.loan_products.each do |loan|%>
+        <p class="p-content"><%=loan.product.name_product%></p>
+        <strong><p class="p-content"><%=loan.product.price%></p></strong> 
+        <% end %>
+    
+      <p class="p-head">Total de préstamo:</p>
         <p class="p-content"><%= @loan.total_loan %></p>
         <%= link_to "Regresar", loans_path, id: "style" %>
   </div>  
