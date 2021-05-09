@@ -37,10 +37,7 @@
       </li>
       <li class="list-group-item">Télefono:
         <%= @customer.telephone %>
-      </li>
-      <li class="list-group-item">Saldo Pendiente:
-        <%= @customer.balance %>
-      </li>
+      </li>   
     </ul>
     <div class="card-body">
       <button><a><%= link_to 'Editar', edit_customer_path(@customer), id: "btn-c" %></a></button> 
