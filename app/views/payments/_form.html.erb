@@ -42,6 +42,7 @@
                               <form>
                                 <% if @customer.present? %>
                                     <p><strong>Cliente:</strong>&nbsp;<%= @customer.name %>&nbsp;<%= @customer.last_name %></p>
+                                    <p><strong>Saldo pendiente:</strong>&nbsp;<%= @customer.balance%></p>
                                   <% elsif%> 
                                     <p><strong>Cliente:</strong>&nbsp;<%= @payment.customer.name %>&nbsp;<%= @payment.customer.last_name %></p>
                                   <% end %>
@@ -51,7 +52,7 @@
                                   </div>
                                   <div class="form-group d-flex align-items-center justify-content-between mt-4 mb-0">
                                     <%= form.submit class: "actions btn btn", id: "create", data: {disable_with: 'submitting...'} %> 
-                                    <button type="button"id="btn"><%= link_to 'Regresar', payments_path, id: "color-back" %></button>
+                                    <button type="button"id="btn"><%= link_to 'Regresar', customers_path, id: "color-back" %></button>
                                   </div>
                                   <% end %>
                               </form>

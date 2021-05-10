@@ -23,7 +23,7 @@
         <%= link_to "Añadir más productos", add_products_loans_path, id: "add_product", remote: true %>                  
         <br>
         <%= form.submit class: 'actions btn btn', id: "color"%>
-          <button id="btn-b"><%= link_to 'Regresar', loans_path, id: "color-back" %></button>
+          <button id="btn-b"><%= link_to 'Regresar', customers_path, id: "color-back" %></button>
           <button id="btn-s"><%= link_to 'Mostrar', @loan, id: "color-back" %></button>
        <% end %>
 </div>

@@ -10,7 +10,7 @@ class CustomersController < ApplicationController
 
   
   def show
-    @customer_data= @customer.loans.select("created_at,SUM(total_loan)").where('created_at > ?', Date.today.beginning_of_month - 1.year).group(:created_at, :total_loan).sum(:total_loan)
+    @customer_data = @customer.loans.select("loans.created_at,SUM(loans.total_loan)").where('created_at > ?', Date.today.beginning_of_month - 1.year).group_by_month('loans.created_at', format: "%b %Y").sum(:total_loan)
   end
 
   

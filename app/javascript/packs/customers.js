@@ -20,8 +20,9 @@ $(document).on('turbolinks:load', function(){
     };
   });
     $("#customer_edit").click(function(){
+      $('#card_customer').toggle(1000,function() {
+      });
       $('#show_customer').toggle(1000,function() {
-          console.log('Ya funca')
       });
     });
 });  
